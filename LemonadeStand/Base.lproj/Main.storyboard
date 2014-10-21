@@ -25,7 +25,7 @@
                                     <rect key="frame" x="16" y="28" width="128" height="21"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$10" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Js-VR-S5B">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="totalScore" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Js-VR-S5B">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" red="0.065023127770758873" green="0.77132936507936511" blue="0.0087724423659042497" alpha="1" colorSpace="calibratedRGB"/>
@@ -34,7 +34,7 @@
                                     <rect key="frame" x="145" y="28" width="123" height="21"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 Lemon" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zg5-ab-VZD">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="totalLemons" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zg5-ab-VZD">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -43,7 +43,7 @@
                                     <rect key="frame" x="145" y="58" width="219" height="21"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 Ice Cubes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cW2-mZ-mia">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="totalIceCubes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cW2-mZ-mia">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -361,11 +361,13 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="purchaseIceCubeCount" destination="CdI-T2-vzl" id="KIm-Z8-QPe"/>
-                        <outlet property="purchaseLemonCount" destination="i57-Go-IvU" id="6h4-dx-qMS"/>
-                        <outlet property="totalIceCubes" destination="cW2-mZ-mia" id="sAA-gl-0pe"/>
-                        <outlet property="totalLemons" destination="zg5-ab-VZD" id="Iob-cD-luv"/>
-                        <outlet property="totalProfit" destination="3Js-VR-S5B" id="Q9a-e1-Veh"/>
+                        <outlet property="mixIceCubesIntoLemonadeLabel" destination="3eV-rq-8Ay" id="apZ-Ok-Vny"/>
+                        <outlet property="mixLemonsIntoLemonadeLabel" destination="sBq-lg-eAx" id="uF5-JC-0bM"/>
+                        <outlet property="purchaseIceCubeCountLabel" destination="CdI-T2-vzl" id="0BM-3Y-hIH"/>
+                        <outlet property="purchaseLemonCountLabel" destination="i57-Go-IvU" id="dcB-l5-1ZQ"/>
+                        <outlet property="totalIceCubesLabel" destination="cW2-mZ-mia" id="84N-TV-v5H"/>
+                        <outlet property="totalLemonsLabel" destination="zg5-ab-VZD" id="75D-gF-qCh"/>
+                        <outlet property="totalProfitLabel" destination="3Js-VR-S5B" id="V2w-le-xyH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
