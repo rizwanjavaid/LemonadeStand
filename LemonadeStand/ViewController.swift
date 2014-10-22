@@ -34,6 +34,9 @@ class ViewController: UIViewController {
     var mixLemonsCount:Int = 0
     var mixIceCubesCount:Int = 0
     
+    let costOfLemon:Int = 2
+    let costOfIce:Int = 1
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,24 +52,55 @@ class ViewController: UIViewController {
     
     func updateScore() {
         self.totalProfitLabel.text = "$" + "\(totalProfit)"
-        self.totalLemonsLabel.text = "\(totalLemons)" + " Lemon"
+        self.totalLemonsLabel.text = "\(totalLemons)" + " Lemons"
         self.totalIceCubesLabel.text = "\(totalIceCubes)" + " Ice Cubes"
     }
 
     
     // Step 1 Actions
     @IBAction func addLemonButtonPressed(sender: UIButton) {
-        
+ 
+        if self.totalProfit >= 1 {
+            self.purchaseLemonsCount++
+            self.purchaseLemonCountLabel.text = "\(purchaseLemonsCount)"
+            self.totalProfit = self.totalProfit - self.costOfLemon
+            self.totalLemons++
+            self.updateScore()
+        }
     }
     
     @IBAction func removeLemonButtonPressed(sender: UIButton) {
         
+        if self.purchaseLemonsCount >= 1 {
+            self.purchaseLemonsCount--
+            self.purchaseLemonCountLabel.text = "\(purchaseLemonsCount)"
+            self.totalProfit = self.totalProfit + self.costOfLemon
+            self.totalLemons--
+            self.updateScore()
+        }
     }
     
     @IBAction func addIceCubesButtonPressed(sender: UIButton) {
+        self.purchaseIceCubesCount++
+        
+        if self.totalProfit >= 1 {
+            self.purchaseIceCubeCountLabel.text = "\(purchaseIceCubesCount)"
+            self.totalProfit = self.totalProfit - self.costOfIce
+            self.totalIceCubesLabel.text = "\(totalIceCubes)"
+            self.totalIceCubes++
+            self.updateScore()
+        }
     }
     
     @IBAction func removeIceCubeButtonPressed(sender: UIButton) {
+        
+        if self.purchaseIceCubesCount >= 1 {
+            self.purchaseIceCubesCount--
+            self.purchaseIceCubeCountLabel.text = "\(purchaseIceCubesCount)"
+            self.totalProfit = self.totalProfit + self.costOfIce
+            self.totalIceCubes--
+            self.updateScore()
+        }
     }
     
     
@@ -76,12 +110,16 @@ class ViewController: UIViewController {
     }
     
     @IBAction func removeLemonsToMixButtonPressed(sender: UIButton) {
+        
+        
     }
     
     @IBAction func addIceCubesToMixButtonPressed(sender: UIButton) {
+        
     }
     
     @IBAction func removeIceCubesToMixButtonPressed(sender: UIButton) {
+        
     }
     
     
@@ -89,10 +127,13 @@ class ViewController: UIViewController {
     // Start Day Action
     
     @IBAction func startDayButtonPressed(sender: UIButton) {
+        
     }
     
     
-    
+    func purchaseSupplies(){
+        
+    }
 
 }
 
